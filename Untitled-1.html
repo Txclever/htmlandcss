@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var num = 1;
+    // alert(isNaN(num)); //false
+    // var num = "1";
+    // alert(isNaN(num)); //false
+    // var num = "a1";
+    // alert(isNaN(num)); //true
+    // var num = "1a";
+    // alert(isNaN(num)); //true
+    // var num = "a1";
+    // alert(Number(null)); //0
+    // var num = "a1";
+    // alert(Number(undefined)); //NaN
+    // var num = "a1";
+    // alert(Number(Boolean)); //NaN
+    // var num = "";
+    // alert(num); //返回空
+    // var num = "123.9";
+    // alert(num); //123.9
+    // var num = "123.9";
+    // alert(Number(num)); //123.9
+    // var num = "123.9";
+    // alert(parseInt(num)); //123
+    // alert(Number(undefined)); //NaN
+    // alert(Number(null)); //0
+    // alert(Number(true)); //1
+    // alert(Number("123")); //123
+    // alert(Number("123a")); //NaN
+    // alert(Number("")); //0
+    // alert(parseInt("123.5")); //23
+    // alert(parseInt(123.5)); //123
+    // alert(parseInt("123")); //123
+    // alert(parseInt("123a")); //123
+    // alert(parseInt("a123")); //NaN
+    // alert(typeof ("123.5")); //string
+    // alert(typeof (123)); //number
+    // alert(typeof (true)); //boolean
+    // alert(typeof (undefined)); //undefined
+    // alert(typeof (null)); //object
+    // function func() {
+    //   num3 = 10;
+    // }
+    // alert(typeof (func())); //undefined
+    // alert(typeof (func));
+    // var str = prompt("请输入一句话", "你真帅"); //两块都可以省略//框里显示你真帅
+    // alert(str); //你真帅
+    // alert(typeof (str)); //类型string
+    // var str = prompt("请输入一个数");
+    // var str1 = prompt("请输入一个数"); //4+5=9
+    // alert(parseInt(str) + parseInt(str1));
+    // var j = 0;
+    // var c = 0;
+    // for (var i = 0; i < 100; i++) {
+    //   c = j++;
+    // }
+    // console.log(c); //99
+    // var j = 0;
+    // for (var i = 0; i < 100; i++) {
+    //   j = j++;
+    // }
+    // console.log(j); //0
+    // var j = 0;
+    // for (var i = 0; i < 100; i++) {
+    //   j = ++j;
+    // }
+    // console.log(j); //100
+
+    // if (0.0) {
+    //   console.log(true);
+    // } else {
+    //   console.log(false);
+    // } //0为假，其他为真
+    // if ("") {
+    //   console.log(true);
+    // } else {
+    //   console.log(false);
+    // } //""为假，其他为真
+    // if (undefined) {
+    //   console.log(true);
+    // } else {
+    //   console.log(false);
+    // } //假
+
+    
+
+    // var a = 10; //定义int整数
+    // var b = 10.00; //定义小数
+    // var c = 12.3; //定义小数
+    // console.log('a:' + typeof (a)) //查看变量a的数据类型
+    // console.log('b:' + typeof (b)) //查看变量b的数据类型
+    // console.log('c:' + typeof (c)) //查看变量c的数据类型
+    // var d = 'abc'; //定义字符串
+    // var e = b + d; //通过赋值语句定义字符串
+    // console.log(e)
+    // var f;
+    // console.log(f) //undefined 1.只定义了，没有赋值声明；2.函数无返回值；
+
+
+
+    //产生数组的方式1(与Java不同的是,在js中定义数组时可以不指定长度；但是在Java中定义数组必须要指定长度，以便内存分配好指定长度的内存空间)
+    var array = new Array();
+    array[0] = 12;
+    array[1] = 'you';
+    //产生数组的方式2
+    var array1 = [12, 4, 'what', [12, 'ip'], 'soga'];
+    var dic = {
+      'name': 'zhangsan',
+      'age': 25,
+      2: 'you'
+    };
+    var a2 = [12, 8, 2, 36, 89, 450, 100, 260]
+    console.log('array1=' + array1);
+    console.log('dic = ' + dic);
+    //  Arrar,数组的相关操作
+    var array1 = new Array(3);
+    array1[0] = 13;
+    array1[1] = 34;
+    array1[2] = 26;
+    array1[3] = 17;
+    var array2 = [12, 34, 56, 78, 89];
+    //   concat()数组插入操作，且是将括号中整体插入到原数组的最后面
+    var array3 = array1.concat(array2)
+    console.log('array3=' + array3);
+    for (var i = 0; i < array3.length; i++) {
+      console.log('array3[' + i + ']=' + array3[i]);
+    }
+    //unshift()数组插入操作，且是将括号中整体插入到原数组的最前面
+    var array4 = array1.unshift([1, 5, 75])
+    array1.unshift(true, 'no')
+
+    //    document.write(array4);
+    console.log(array1)
+    console.log(array4, typeof (array4))
+    //shift()数组删除操作，且删除原数组的第一个元素
+    array1.shift()
+    console.log(array1)
+    //   sort 排序操作，按最高位(例如:a = [8,123],则a.sort(),a=[123,8])的按从小到大排序
+    //   reverse 排序操作，按最高位(例如:a = [8,123,34,10],则a.reverse(),a=[8,34,123,10])的按从小到大排序
+    array1.sort()
+    array2.reverse()
+
+    //自定义函数来按数组元素的数值大小正常排序
+    function sort(array1) {
+      /*自定义数组排序(正常排序)*/
+      temp1 = array1[0];
+      for (var i = 0; i < array1.length; i++) {
+        // a=array1[i];
+        for (var j = i + 1; j < array1.length; j++) {
+          if (array1[i] > array1[j]) {
+            temp1 = array1[i];
+            array1[i] = array1[j];
+            array1[j] = temp1;
+          }
+        }
+      }
+      return array1;
+    }
+  </script>
+</body>
+
+</html>
